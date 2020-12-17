@@ -5,69 +5,69 @@ import java.util.Scanner;
 public class Main {
 
 
-        //Funkcja kodująca text do szyfru cezara
+        //Funkcja ktora koduje tekst do szyfru cezara
         public static String code(String szyfrowanko){
 
-            //Tablioca Char
+            
             char[] tab = szyfrowanko.toCharArray();
 
             //Pętla przechodząca przez wszystkie elementy tablicy char
             for (int i = 0; i < szyfrowanko.length() ; i++) {
 
-                //Argument który pokazuje litery małe i duże
+                //Argument ktoryu pokazuje duze i male litery
                 if ((tab[i] >= 65 && tab[i] <= 90) || (tab[i] >= 97 && tab[i] <= 122)) {
 
-                    //Ustalenie że X zamienia się na A
+                    //duze X zamienia się na duze A
                     if (tab[i] == 'X') {
                         tab[i] = 'A';
                     }
-                    //Ustalenie że Y zamienia się na B
+                    //duze Y zamienia się na duze B
                     else if (tab[i] == 'Y') {
                         tab[i] = 'B';
                     }
-                    //Ustalenie że Z zamienia się na C
+                    //duze Z zamienia się na duze C
                     else if (tab[i] == 'Z') {
                         tab[i] = 'C';
                     }
-                    //Ustalenie że x zamienia się na a
+                    //małe x zamienia się na małe a
                     else if (tab[i] == 'x') {
                         tab[i] = 'a';
                     }
-                    //Ustalenie że y zamienia się na b
+                    //male y zamienia się na male b
                     else if (tab[i] == 'y') {
                         tab[i] = 'b';
                     }
-                    //Ustalenie że z zamienia się na c
+                    //male z zamienia się na male c
                     else if (tab[i] == 'z') {
                         tab[i] = 'c';
                     }
-                    //Ustalenie że każda inna litera zmienia się na litere o 3 miejsca dalej
+                    //kazda inna litera idzie o 3 miejsca dalej
                     else {
                         tab[i] += 3;
                     }
                 }
             }
-            //Konwersja tablicy char z powrotem na string
+            //Konwersja tablicy char na stringa
             String result = String.valueOf(tab);
             return result;
         }
-        //Główna część programu
+        
         public static void main(String[] args) {
 
-            //Wypisanie do czego służy pogram
+            //do czego sluzy program
             System.out.println("jest to program, który szyfruje tekst");
 
-            //Prośba o wpisanie tekstu
-            System.out.println("prosze wpisz tekst ");
+            //napisanie tekstu ktory ma byc zaszyfrowany
+            System.out.println("wpisz swoj tekst, ktory ma byc zaszyfrowany ");
 
-            //Ustawienie skanera aby zczytywał nasz tekst
+            //Ustawienie skanera zeby zczytywal nasx tekst
             Scanner sc = new Scanner(System.in);
             String txt = sc.nextLine();
 
-            //Wywołanie funkcji
+            
             String result = code(txt);
 
-            //Wypisanie tekstu zaszyfrowanego
+          //wypsamoe zaszyfrowanewgo tekstu
             System.out.println("twoj zaszyfrowany tekst: " + result);
 
         }
