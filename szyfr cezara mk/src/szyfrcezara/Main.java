@@ -18,12 +18,13 @@ public class Main {
                 if ((tab[i] >= 65 && tab[i] <= 90) || (tab[i] >= 97 && tab[i] <= 122)) {
 
                     //duze X zamienia się na duze A
-                    if (tab[i] == 'X') {
-                        tab[i] = 'A';
-                    }
-                    //duze Y zamienia się na duze B
-                    else if (tab[i] == 'Y') {
+                        //duze Y zamienia się na duze B
+                    if (tab[i] == 'Y') {
                         tab[i] = 'B';
+                    }
+                    //duze X zamienia się na duze A
+                    else if (tab[i] == 'X') {
+                        tab[i] = 'A';
                     }
                     //duze Z zamienia się na duze C
                     else if (tab[i] == 'Z') {
